@@ -157,7 +157,7 @@ exports.Base = class Base
         if fragments.length isnt 0
           precedingFragment = fragments[fragments.length - 1]
           if commentFragment.newLine and precedingFragment.code isnt '' and
-             not /\n\s*$/.test precedingFragment.code
+             not /\n\s$/.test precedingFragment.code
             commentFragment.code = "\n#{commentFragment.code}"
         fragments.push commentFragment
 
